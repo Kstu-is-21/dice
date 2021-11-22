@@ -26,3 +26,16 @@ def roll_dice():
     label2.configure(text="Ты получил  "+str(res))
     bttn_clicks += 1
     label1['text'] = "Кости были брошены: " + str(bttn_clicks) + " раз(а)"
+
+#Third commit (restart function)
+def restart():
+    global bttn_clicks
+    global i
+    bttn_clicks= 0
+    label1.configure(text="")
+    label2.configure(text="None")
+    pygame.mixer.init()
+    pygame.mixer.music.stop()
+    if i:
+        c.delete(i)
+    rollbutton.configure(state='normal')
