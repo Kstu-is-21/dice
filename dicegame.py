@@ -39,3 +39,18 @@ def restart():
     if i:
         c.delete(i)
     rollbutton.configure(state='normal')
+
+#Fourth commit (Rendering)
+ldice = tk.Label(r, text='', font=('Times', 120),fg='green')
+rollbutton = tk.Button(r, text='Кинуть кости', font=('times', 20,"bold"),state="disabled",background="brown",foreground='yellow',height=1, width=20, command=roll_dice)
+c.create_window(350, 120, window=rollbutton)
+button1 = tk.Button(r, text='Начало/Перезапуск игры', font=('times', 20,"bold"),background="blue",foreground='white',height=1, width=20, command=restart)
+c.create_window(350, 50, window=button1)
+label1 = tk.Label(r, text='', font=('Times',20,'bold'),fg='brown')
+c.create_window(180, 550, window=label1)
+label2 = tk.Label(r, text='None', font=('Times',20,'bold'),bg='purple',fg='yellow',width=12)
+c.create_window(480, 550, window=label2)
+
+
+
+r.mainloop()
